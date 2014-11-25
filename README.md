@@ -8,6 +8,13 @@ sudo mount -o loop CDx.iso /mount/cdrom
 sudo cp -R /mount/cdrom/* ~/Games/ut2003/
 ```
 
+#Run update script
+
+This update script will update ut2003 and install the launcher and the ucc tool
+```
+linux32 ./ut2003_2225beta3-multilanguage.update.run --target /absolute/path/ut2003/
+```
+
 #CD Key
 
 Put your cd key in a file
@@ -17,7 +24,7 @@ echo XXXXX-XXXXX-XXXXX-XXXX >> ut2003/System/cdkey
 
 #Decompress .uz2 files
 
-You need to decompress .uz2 files by running this
+You need to decompress .uz2 files using ucc tool
 ```
 for i in ../**/*.uz2 ; do ./ucc-bin decompress $i ; done
 ```
